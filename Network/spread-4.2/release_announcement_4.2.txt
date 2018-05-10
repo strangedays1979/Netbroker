@@ -1,0 +1,59 @@
+Spread 4.2.0  http://www.spread.org
+
+Spread Concepts LLC is happy to announce the release of a 
+new stable version, 4.2.0, of the Spread toolkit. 
+
+The Spread 4.2 release is an important bugfix release for the Spread project. 
+This release has a large number of small changes which include bugfixes,
+very specific performance improvements, and general improvements to the code 
+and build process.
+
+The main new features of this release are:
+
+1) Added Keepalive support to client-server TCP connections. Requires correct
+   operating system values set for keepalives in order to be useful. 
+2) Switch internal code to use MONOTONIC clocks when available and appropriate
+   to remove chance of system clock changes (from the clock being set) from affecting
+   message processing
+3) Break out events, memory, data_link and alarm code into separate 
+   libspread-util package. This package also has a number of improvements in
+   the functionality of those code files which are listed in the internal
+   package release notes. 
+
+It also includes a number of important bug fixes. The most significant include:
+
+1) Fix bug with structure size on 64 bit platforms causing crash.
+2) Fix several deadlock, crashes and race conditions in java Listener code.
+3) Fix 100 ms timeout in java socket handling code so it does not corrupt 
+   messages that take a long time to arrive. 
+4) Fix java disconnect bug that prevented client from reconnecting until restarted.
+5) Remove cause of slow message delivery when a client is receiving a lot of
+   messages and gets into a badger state. 
+6) Improve help output and error messages in utility programs. 
+7) Fix token hurry bug that caused messages to have a 2 second latency in 
+   specific circumstances.
+8) Fix crash bug when new daemon configuration files are loaded while the
+   system is running. 
+
+This release does not include any API changes, so applications should
+be able to be relinked or recompiled with the new Spread library without
+changes. 
+
+Spread is a toolkit that provides a high performance messaging service
+that is resilient to faults across external or internal
+networks. Spread functions as a unified message bus for distributed
+applications, and provides highly tuned application-level multicast
+and group communication support. Spread services range from reliable
+message passing to fully ordered messages with delivery guarantees,
+even in case of computer failures and network partitions.
+
+Please be aware, that under the Spread Open Source License, the toolkit may 
+be freely used only under some conditions. For example, the license includes 
+the requirement that all advertising materials (including web pages) 
+mentioning software that uses Spread display a specific acknowledgment. 
+Please review the license agreement for more details.
+http://www.spread.org/license/
+
+Other commercial licenses or other licensing arrangements are available. 
+Please contact info@spreadconcepts.com. 
+
