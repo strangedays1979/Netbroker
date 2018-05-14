@@ -13,15 +13,6 @@
 #include "INetBroker.h"
 #include "spreadConnector.h"
 
-#define S_DEBUG     0x01        //< @def DEBUG Severity level.
-#define S_INFO      0x02        //< @def INFO Severity level.
-#define S_NOTICE    0x04        //< @def NOTICE Severity level.
-#define S_WARNING   0x08        //< @def WARNING Severity level.
-#define S_ERROR     0x10        //< @def ERROR Severity level.
-#define S_CRITICAL  0x20        //< @def CRITICAL Severity level.
-#define S_ALERT     0x40        //< @def ALERT Severity level.
-#define S_EMERGENCY 0x80        //< @def EMERGENCY Severity level.
-
 
 SpreadConnector::SpreadConnector
 ( const std::string&                __rClientName

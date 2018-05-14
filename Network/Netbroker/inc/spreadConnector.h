@@ -152,7 +152,6 @@ public:
 
     /**
     * @details      Gets Connector' Status.
-    * @return       Returns a string with SPREAD server address.
     * \n */
     inline
         int getConnStatus() const ;

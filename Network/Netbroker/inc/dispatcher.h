@@ -245,7 +245,7 @@ private:
     Status                      m_activity;                 //! Current activity status.
     mutable boost::mutex        m_activityMutex;            //! Thread-safe activity mutex.
 
-    boost::thread*              m_pThread;                  //! Thread-associated mutex.
+    boost::thread*              m_pThread;                  //! Worker thread to enqueue data from connector to groups related buffers.
     GroupsBufferMap             m_group_buffer_map;         //! Current registered SEND/RECEIVE groups.
 
     SendOnlyGroups	            m_sendOnlyGroups;           //! SEND-ONLY groups.
